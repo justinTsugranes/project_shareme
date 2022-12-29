@@ -13,11 +13,11 @@
 
 <!-- TODO: CHANGE PROJECT TITLE -->
 
-### [Project-Title][project-url]
+### [ShareMe][project-url]
 
 <!-- TODO: ADD SHORT PROJECT DESCRIPTION -->
 
-PROJECT_DESCRIPTION
+Full Stack Social App built with React. Project includes TailwindCSS, Sanity CMS, and Google Auth
 
 [Explore the docs]([repo-url]) -- [View Demo]([project-url]) -- [Report Bug]([issues-url])
 
@@ -326,19 +326,19 @@ Give a ⭐️ if you like this project and if you like my work, maybe you would 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[repo-url]: https://github.com/justintsugranes/project_mern-goals-app.git
+[repo-url]: https://github.com/justinTsugranes/project_shareme
 [project-url]: https://justintsugranesmerngoalsapp.herokuapp.com/
 [project-screenshot]: images/project-screenshot.jpg
-[contributors-shield]: https://img.shields.io/github/contributors/justintsugranes/project_mern-goals-app.svg?style=for-the-badge
-[contributors-url]: https://github.com/justintsugranes/project_mern-goals-app/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/justintsugranes/project_mern-goals-app.svg?style=for-the-badge
-[forks-url]: https://github.com/justintsugranes/project_mern-goals-app/network/members
-[stars-shield]: https://img.shields.io/github/stars/justintsugranes/project_mern-goals-app.svg?style=for-the-badge
-[stars-url]: https://github.com/justintsugranes/project_mern-goals-app/stargazers
-[issues-shield]: https://img.shields.io/github/issues/justintsugranes/project_mern-goals-app.svg?style=for-the-badge
-[issues-url]: https://github.com/justintsugranes/project_mern-goals-app/issues
-[license-shield]: https://img.shields.io/github/license/justintsugranes/project_mern-goals-app.svg?style=for-the-badge
-[license-url]: https://github.com/justinTsugranes/justintsugranes_website/blob/main/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/justintsugranes/project_shareme.svg?style=for-the-badge
+[contributors-url]: https://github.com/justintsugranes/project_shareme/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/justintsugranes/project_shareme.svg?style=for-the-badge
+[forks-url]: https://github.com/justintsugranes/project_shareme/network/members
+[stars-shield]: https://img.shields.io/github/stars/justintsugranes/project_shareme.svg?style=for-the-badge
+[stars-url]: https://github.com/justintsugranes/project_shareme/stargazers
+[issues-shield]: https://img.shields.io/github/issues/justintsugranes/project_shareme.svg?style=for-the-badge
+[issues-url]: https://github.com/justintsugranes/project_shareme/issues
+[license-shield]: https://img.shields.io/github/license/justintsugranes/project_shareme.svg?style=for-the-badge
+[license-url]: https://github.com/justinTsugranes/project_shareme/blob/main/LICENSE.md
 
 <!-- TECH SHIELDS/LINKS -->
 
@@ -350,8 +350,9 @@ Give a ⭐️ if you like this project and if you like my work, maybe you would 
 [chakra-ui-url]: https://getbootstrap.com -->
 <!-- [material-ui]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [material-ui-url]: https://getbootstrap.com -->
-<!-- [tailwind]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[tailwind-url]: https://getbootstrap.com -->
+
+[tailwind]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[tailwind-url]: https://getbootstrap.com
 
 <!-- JS LIBRARIES / FRAMEWORKS -->
 
@@ -365,8 +366,10 @@ Give a ⭐️ if you like this project and if you like my work, maybe you would 
 [laravel-url]: https://laravel.com -->
 <!-- [next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/ -->
-<!-- [react]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/ -->
+
+[react]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+
 <!-- [react-native]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-native-url]: https://reactjs.org/ -->
 <!-- [svelte]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
@@ -408,10 +411,20 @@ Give a ⭐️ if you like this project and if you like my work, maybe you would 
 <!-- [postgresql]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [postgresql-url]: https://www.postgresql.org/ -->
 
+<!-- CONTENT MANAGEMENT -->
+<!-- [sanity]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[sanity-url]: https://www.postgresql.org/ -->
+<!-- [contentful]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[contentful-url]: https://www.postgresql.org/ -->
+<!-- [strapi]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[strapi-url]: https://www.postgresql.org/ -->
+
 <!-- AUTH / SECURITY-->
 
 <!-- [jwt]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [jwt-url]: https://jwt.io/ -->
+<!-- [google-autg]:https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[google-auth-url]:  -->
 
 <!-- DEVOPS -->
 
