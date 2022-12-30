@@ -1,65 +1,76 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import GoogleLogin from 'react-google-login'
+import { gapi } from 'gapi-script'
 import { FcGoogle } from 'react-icons/fc'
 import shareVideo from '../assets/share.mp4'
 import logo from '../assets/logowhite.png'
-import GoogleLogin from 'react-google-login'
+
+import { client } from '../client'
 
 const Login = () => {
-  const onSuccess = (res) => {
-    console.log('success:', res)
-    localStorage.setItem('user', JSON.stringify(res.profileObj))
+  const navigate = useNavigate()
+  const clientId = process.env.REACT_APP_GOOGLE_API_TOKEN
 
-    const { name, googleId, imageUrl } = res.profileObj
+  useEffect(() => {
+    const initClient = () => {
+      gapi.client.init({
+        clientId: clientId,
+        scope: '',
+      })
+    }
+    gapi.load('client:auth2', initClient)
+  })
 
-    // new sanity doc per user schema
+  const responseGoogle = (response) => {
+    localStorage.setItem('user', JSON.stringify(response.profileObj))
+    const { name, googleId, imageUrl } = response.profileObj
     const doc = {
       _id: googleId,
       _type: 'user',
       userName: name,
       image: imageUrl,
     }
-  }
-
-  const onFailure = (err) => {
-    console.log('failed:', err)
+    client.createIfNotExists(doc).then(() => {
+      navigate('/', { replace: true })
+    })
   }
 
   return (
     <div className='flex justify-start items-center flex-col h-screen'>
-      <div className='relative w-full h-full'>
-        {/* vid */}
+      <div className=' relative w-full h-full'>
         <video
           src={shareVideo}
           type='video/mp4'
-          Loop
+          loop
           controls={false}
           muted
           autoPlay
           className='w-full h-full object-cover'
         />
-        {/* logo */}
-        <div className='absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 bg-blackOverlay'>
+
+        <div className='absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0    bg-blackOverlay'>
           <div className='p-5'>
-            <img src={logo} width='130px' alt='logo' />
+            <img src={logo} alt='logo' width='130px' />
           </div>
-          {/* login */}
+
           <div className='shadow-2xl'>
             <GoogleLogin
-              clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
+              clientId={clientId}
               render={(renderProps) => (
                 <button
                   type='button'
+                  className='bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none'
                   onClick={renderProps.onClick}
                   disabled={renderProps.disabled}
-                  className='bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none'
                 >
-                  <FcGoogle className='mr-4' buttonText='Sign in with Google' />{' '}
-                  Sign in with google
+                  <FcGoogle className='mr-4' /> Sign in with google
                 </button>
               )}
-              onSuccess={onSuccess}
-              onFailure={onFailure}
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
               cookiePolicy='single_host_origin'
+              isSignedIn={true}
             />
           </div>
         </div>
