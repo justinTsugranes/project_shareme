@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { client } from '../client'
@@ -9,6 +9,7 @@ import Spinner from './Spinner'
 const Feed = () => {
   const [pins, setPins] = useState()
   const [loading, setLoading] = useState(false)
+
   const { categoryId } = useParams()
 
   useEffect(() => {
@@ -28,7 +29,9 @@ const Feed = () => {
       })
     }
   }, [categoryId])
+
   const ideaName = categoryId || 'new'
+
   if (loading) {
     return <Spinner message={`We are adding ${ideaName} ideas to your feed!`} />
   }
