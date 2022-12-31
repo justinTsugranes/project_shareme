@@ -14,12 +14,12 @@ const App = () => {
         : localStorage.clear()
 
     if (!User) navigate('/login')
-  }, [])
+  })
 
   return (
     <Routes>
-      <Route path='login' element={<Login />} />
-      <Route path='/*' element={<Home />} />
+      <Route path="login" element={<Login />} />
+      <Route path="/*" element={<Home />} />
     </Routes>
   )
 }
