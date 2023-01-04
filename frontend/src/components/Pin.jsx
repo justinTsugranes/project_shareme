@@ -1,3 +1,4 @@
+// Importing necessary components and libraries
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
@@ -8,16 +9,24 @@ import { BsFillArrowUpRightCircleFill } from 'react-icons/bs'
 import { client, urlFor } from '../client'
 import { fetchUser } from '../utils/fetchUser'
 
+// The Pin component is a functional component that displays a single pin on the homepage
+// It receives a pin object as props
 const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
+  // Use state hook to track if the mouse is hovering over the pin
   const [postHovered, setPostHovered] = useState(false)
+  // Use the useNavigate hook to allow navigation to a new page
   const navigate = useNavigate()
+  // Fetch the current user's data
   const user = fetchUser()
 
+  // Check if the current user has saved the pin
   const alreadySaved = !!save?.savedPosts?.filter(
     (post) => post.postedBy._id === user.googleId,
   )?.length
 
+  // Helper unction to save the current pin for the current user
   const savePin = (_id) => {
+    // If the current user hasn't saved the pin yet, save it
     if (!alreadySaved) {
       client
         .patch(_id)
@@ -39,7 +48,9 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
     }
   }
 
+  // Helper unction to delete the current pin
   const deletePin = (_id) => {
+    // Use the Sanity client to delete the pin and reload the page
     client.delete(_id).then(() => {
       window.location.reload()
     })
