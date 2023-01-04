@@ -11,11 +11,7 @@
   </a>
 </div>
 
-<!-- TODO: CHANGE PROJECT TITLE -->
-
 ### [Shareme][project-url]
-
-<!-- TODO: ADD SHORT PROJECT DESCRIPTION -->
 
 A Full Stack social app built with React, Tailwind CSS and Sanity CMS.
 

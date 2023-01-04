@@ -1,23 +1,22 @@
-import { useState, useRef, useEffect } from 'react'
-import { HiMenu } from 'react-icons/hi'
+import { useEffect, useRef, useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
+import { HiMenu } from 'react-icons/hi'
 import { Link, Route, Routes } from 'react-router-dom'
 
+import logo from '../assets/logo.png'
+import { client } from '../client'
 import { Sidebar, UserProfile } from '../components'
 import { userQuery } from '../utils/data'
-import { client } from '../client'
+import { fetchUser } from '../utils/fetchUser'
 import Pins from './Pins'
-import logo from '../assets/logo.png'
 
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [user, setUser] = useState()
   const scrollRef = useRef(null)
 
-  const userInfo =
-    localStorage.getItem('user') !== 'undefined'
-      ? JSON.parse(localStorage.getItem('user'))
-      : localStorage.clear()
+  // utils/fetchUser.js
+  const userInfo = fetchUser()
 
   useEffect(() => {
     const query = userQuery(userInfo?.googleId)
@@ -25,7 +24,7 @@ const Home = () => {
     client.fetch(query).then((data) => {
       setUser(data[0])
     })
-  }, [])
+  }, [userInfo?.googleId])
 
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0)
