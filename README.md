@@ -45,13 +45,9 @@ A Full Stack social app built with React, Tailwind CSS and Sanity CMS.
 
 [![Project Screen Shot][project-screenshot]][project-url] [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
 
-<!-- TODO: ADD LONG PROJECT DESCRIPTION -->
-
-<!-- LONG_PROJECT_DESCRIPTION -->
+ShareMe is a full stack social app built with React.js. The project utilizes TailwindCSS for styling, Sanity CMS for content management, and Google Auth for user authentication. It is designed to allow users to connect with one another and share their interests and experiences.
 
 _I'd love to hear any feedback or just thoughts. Feel free to reach out at my contact info below. Cheers!_
-
-<!-- TODO: UNCOMMENT APPLICABLE TECH -->
 
 ### Stack
 
